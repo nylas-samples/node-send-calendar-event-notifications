@@ -1,0 +1,13 @@
+
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "es2022",
+    "declaration": true,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "strict": true
+  }
+}

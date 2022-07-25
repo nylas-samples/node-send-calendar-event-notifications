@@ -1,0 +1,62 @@
+{
+  "name": "starter-repo",
+  "version": "1.0.0",
+  "description": "A starter node repo for creating code samples",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --ext .js,.ts -f visualstudio .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:ci": "npm run lint:fix -- --quiet",
+    "lint:prettier": "prettier --write '**/*.{ts,js}'",
+    "lint:prettier:check": "prettier --check '**/*.{ts,js}'",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/js-with-ts",
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.test.json"
+      }
+    },
+    "coverageThreshold": {
+      "global": {
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-env": "^7.3.1",
+    "@types/backoff": "^2.5.1",
+    "@types/jest": "^27.5.0",
+    "@types/node-fetch": "^2.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-custom-rules": "^0.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.0.3",
+    "prettier": "^2.6.2",
+    "pretty-format": "^28.0.2",
+    "ts-jest": "^28.0.1",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "nylas": "^6.4.0"
+  }
+}

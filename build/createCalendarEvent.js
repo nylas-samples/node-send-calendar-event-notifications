@@ -22,7 +22,6 @@ const CALENDAR_ID = '<CALENDAR_ID>';
 // Provide participant details
 const PARTICIPANT_EMAIL = '<PARTICIPANT_EMAIL>';
 const PARTICIPANT_NAME = '<PARTICIPANT_NAME>';
-// TODO: Is this the correct format?
 const PARTICIPANT_PHONE_NUMBER = '<PARTICIPANT_PHONE_NUMBER>';
 // Create an event
 const createCalendarEvent = async function () {

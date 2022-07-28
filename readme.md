@@ -35,49 +35,26 @@ $ npm run build
 $ node build/index.js
 ```
 
-When you run the script, you'll get account information output in your terminal:
+The index.js consists of functions for different calendar functions:
 
-```bash
-{
-    ...
-    id: '<ACCOUNT_ID>',
-    accountId: '<ACCOUNT_ID>',
-    object: 'account',
-    name: '<ACCOUNT_NAME>',
-    emailAddress: '<ACCOUNT_EMAIL>',
-    provider: '<EMAIL_PROVIDER>',
-    organizationUnit: 'label',
-    syncState: 'running',
-    linkedAt: 2022-04-21T14:48:14.000Z,
-    accessToken: ''
-  }
-}
+
+createCalendarEvent to create a calendar event (you should do this first)
+addEmailNotification to add an email notification to the calendar event
+addSMSNotification to add a SMS notification to the calendar event
+addWebhookNotification to add a webhook notification to the calendar event
+
+By commenting out the function (and import), you can run the specific function as follows:
+
 ```
+  import createCalendarEvent from './listCalendars';
+  \\...commented out imports
+
+  createCalendarEvent();
+  \\...commented out function calls
+```
+
+Be sure to check if any specific data is required. For example createCalendarEvent.ts requires a few pieces of data like replacing <CALENDAR_ID>.
 
 ## Learn more
 
 Visit our [Nylas Node.js SDK documentation](https://developer.nylas.com/docs/developer-tools/sdk/node-sdk/) to learn more.
-
-## Calendar Events Notifications 
-### Email
-### SMS
-### Webhook
-### One more? Push notification?
-
-email {
-Email
-
-type: string
-Default: email
-Type of notification
-
-minutes_before_event: string
-Number of minutes before event to send notification
-
-body: string
-Email body. Accepts HTML
-
-subject: string
-Email subject
-
-}

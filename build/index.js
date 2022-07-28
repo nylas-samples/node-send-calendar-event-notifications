@@ -1,10 +1,10 @@
-import 'dotenv/config';
-import Nylas from "nylas";
-Nylas.config({
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-});
-const nylas = Nylas.with(process.env.ACCESS_TOKEN);
-const currentAccount = await nylas.account.get();
-// @ts-ignore
-console.log({ currentAccount });
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const createCalendarEvent_1 = __importDefault(require("./createCalendarEvent"));
+(0, createCalendarEvent_1.default)();
+// addEmailNotification();
+// addSMSNotification();
+// addWebhookNotification();

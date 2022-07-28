@@ -1,6 +1,6 @@
-# node-starter-repo
+# node-send-calendar-event-notifications
 
-This sample repo will show you how to easily to get started with the Nylas Node.js SDK.
+This sample repo will show you how to easily send calendar event notifications with the Nylas Node.js SDK.
 
 ## Setup
 
@@ -57,3 +57,27 @@ When you run the script, you'll get account information output in your terminal:
 ## Learn more
 
 Visit our [Nylas Node.js SDK documentation](https://developer.nylas.com/docs/developer-tools/sdk/node-sdk/) to learn more.
+
+## Calendar Events Notifications 
+### Email
+### SMS
+### Webhook
+### One more? Push notification?
+
+email {
+Email
+
+type: string
+Default: email
+Type of notification
+
+minutes_before_event: string
+Number of minutes before event to send notification
+
+body: string
+Email body. Accepts HTML
+
+subject: string
+Email subject
+
+}

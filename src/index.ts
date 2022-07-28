@@ -1,14 +1,9 @@
-import 'dotenv/config';
-import Nylas from "nylas"
+import createCalendarEvent from './createCalendarEvent';
+import addEmailNotification from "./addEmailNotification";
+import addSMSNotification from "./addSMSNotification";
+import addWebhookNotification from "./addWebhookNotification";
 
-Nylas.config({
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-});
-
-const nylas = Nylas.with(process.env.ACCESS_TOKEN);
-
-const currentAccount = await nylas.account.get();
-
-// @ts-ignore
-console.log({ currentAccount })
+createCalendarEvent();
+// addEmailNotification();
+// addSMSNotification();
+// addWebhookNotification();

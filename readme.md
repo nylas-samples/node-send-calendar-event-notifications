@@ -38,10 +38,10 @@ $ node build/index.js
 The index.js consists of functions for different calendar functions:
 
 
-createCalendarEvent to create a calendar event (you should do this first)
-addEmailNotification to add an email notification to the calendar event
-addSMSNotification to add a SMS notification to the calendar event
-addWebhookNotification to add a webhook notification to the calendar event
+- `createCalendarEvent` to create a calendar event (you should do this first)
+- `addEmailNotification` to add an email notification to the calendar event
+- `addSMSNotification` to add a SMS notification to the calendar event
+- `addWebhookNotification` to add a webhook notification to the calendar event
 
 By commenting out the function (and import), you can run the specific function as follows:
 
